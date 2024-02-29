@@ -1,18 +1,17 @@
 
-# 解锁动画
+# Unlock Video
 
-**请注意解锁动画和视频背景的区别**
+The unlock video feature allows for an unlock video to play before the chart commences.  (Think Spasmodic/Igallta; before your play the chart it shows a video first.)
 
-解锁动画允许在玩家初次游玩谱面前播放一段视频。
+## How To Implement
 
-## 使用方法
+At the moment the unlock video system has not been fully implemented yet.
 
-目前 UI 还没做好，稍微有些麻烦。下面的步骤建议在 Windows 上进行。
+1. In your chart folder (the folder which contains your chart file, audio, illustration, etc.), add in your unlock video video.
+2. In the same directory, find the file 'info.yml'.  Find the line 'unlockVideo', and add the name of your unlock video.
+3. Re-zip your chart up and import it into Phira.
 
-如果你的谱面已经有了 `info.yml`，请跳转到第三步。
+## Notes
 
-1. 在 Phira 中导入你的谱面；
-2. 在 `data/charts/custom` 中搜索你的谱面 ID（如 `9067228`），找到对应的文件夹，在里面找到 `info.yml`，拷贝到你的谱面文件夹里（注意不是导入到 Phira 后的文件夹，是 pez 解压出来的文件夹）；
-3. 向你的谱面文件夹（注意不是导入到 Phira 后的文件夹，是 pez 解压出来的文件夹）内加入解锁动画，假设文件名为 `unlock.mp4`；
-4. 在 `info.yml` 中找到 `unlockVideo: null` 一行，替换为 `unlockVideo: unlock.mp4`（如果没有这一行，则加上这一行）；
-5. 重新导入你的谱面。
+1. Your video should use the H264 video codec and flac, aac, wav, mp3, or vorbis (ogg) audio format.
+2. Remember that Phira has a file size limit when uploading your chart!
