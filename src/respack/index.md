@@ -1,25 +1,25 @@
-# 资源包
+# Resource Packs
 
-在 prpr 中，你可以自定义资源包。资源包包含了音符的样式、粒子效果、打击音效等等元素。你可以在测试群或频道中找到资源包，也可以选择自己制作资源包。以下将具体阐述资源包的文件结构。
+Phira offers the option to customize your gameplay visuals using Resource Packs(Respacks).  Think of them as Minecraft resource packs; they don't change the actual gameplay, only the visual experience.
 
-## 结构
+## File Structure
 
-资源包是单个 zip 压缩文件，其中包含了配置文件 `info.yml` 和其他的资源文件。其中，资源文件有些是必须存在，有些则是可选的。
+A respack consists of multiple resource files packaged into one zip file.  Some are required, some are not.
 
-### 资源文件
+### Files
 
-资源文件必须包括：
+The following resources are required:
 
-- `click.png` 和 `click_mh.png`：Click 音符的皮肤，`mh` 代表双押；
-- `drag.png` 和 `drag_mh.png`：Drag 音符的皮肤，`mh` 代表双押；
-- `flick.png` 和 `flick_mh.png`：Flick 音符的皮肤，`mh` 代表双押；
-- `hold.png` 和 `hold_mh.png`：Hold 音符的皮肤，`mh` 代表双押；
-- `hit_fx.png`：打击特效图片。
+- `click.png` and `click_mh.png`：The skin of the tap note (including simuul.)
+- `drag.png`and `drag_mh.png`：The skin of the drag note (including simul.)
+- `flick.png` and `flick_mh.png`：The skin of the flick note (including simul.)
+- `hold.png` and `hold_mh.png`：The skin of the hold note (including simul.)
+- `hit_fx.png`：Hit effect images.
 
-资源文件可以包括（即若不包括，将使用默认）：
+The following resources are optional but recommended:
 
-- `click.ogg`、`drag.ogg` 和 `flick.ogg`：对应音符的打击音效，注意采样率必须为 44100Hz，否则在渲染时（prpr-render）会导致崩溃；
-- `ending.mp3`：结算界面背景音乐。
+- `click.ogg`, `drag.ogg` and `flick.ogg`：The hitsounds of the specified notes. (Tap and Hold notes use the same sfx.)
+- `ending.mp3`：The results screen background music.
 
 ### 配置文件
 
